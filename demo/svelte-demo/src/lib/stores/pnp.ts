@@ -1,6 +1,7 @@
 import { writable, derived, get } from 'svelte/store';
 // Import from source for development
 import { PNP, ConfigBuilder } from '../../../../../src';
+import { fetchBalance } from './ledger';
 // ICP-only build: non-IC wallet extensions disabled while migrating to @icp-sdk/core v5.
 
 // Stores
@@ -36,7 +37,9 @@ const initPNP = () => {
             if (account) {
                 isConnected.set(true);
                 principalId.set(account.owner);
+                subaccount.set(account.subaccount || null);
                 lastEvent.set({ type: 'reconnected', walletId: stored });
+                fetchBalance();
             }
         }).catch(() => localStorage.removeItem('pnpConnectedWallet'));
     }
