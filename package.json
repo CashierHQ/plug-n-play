@@ -24,6 +24,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prepare": "npm run build",
     "build:okx": "BUILD_PACKAGE=okx vite build",
     "build:phantom": "BUILD_PACKAGE=phantom vite build",
     "build:solflare": "BUILD_PACKAGE=solflare vite build",
