@@ -1,7 +1,7 @@
 // src/adapters/BaseSiwxAdapter.ts
 
-import { Ed25519KeyIdentity, Delegation, DelegationChain, DelegationIdentity } from "@dfinity/identity";
-import { type ActorSubclass, type Identity } from "@dfinity/agent";
+import { Ed25519KeyIdentity, Delegation, DelegationChain, DelegationIdentity } from "@icp-sdk/core/identity";
+import { type ActorSubclass, type Identity } from "@icp-sdk/core/agent";
 import { BaseDelegationAdapter } from "./BaseDelegationAdapter";
 
 /**

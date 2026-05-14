@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { IIAdapter } from '../src/adapters/ic/IIAdapter';
-import { AuthClient } from "@dfinity/auth-client";
+import { AuthClient } from "@icp-sdk/auth/client";
 import { vi } from 'vitest';
 import { type Wallet } from '../src/types'; // Corrected path for types
 

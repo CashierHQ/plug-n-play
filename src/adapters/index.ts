@@ -69,7 +69,7 @@ export const Adapters: Record<string, Adapter.Config> = {
       fetchRootKey: true,
       verifyQuerySignatures: false,
       delegationTimeout: 24 * 60 * 60 * 1000,
-      iiProviderUrl: "https://id.ai", // II 2.0 (new domain)
+      iiProviderUrl: "https://id.ai/authorize", // II 2.0 (new domain)
     },
   },
   ii_legacy: {

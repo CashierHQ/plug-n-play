@@ -1,5 +1,5 @@
-import { Principal } from "@dfinity/principal";
-import { Actor, HttpAgent, type ActorSubclass } from "@dfinity/agent";
+import { Principal } from "@icp-sdk/core/principal";
+import { Actor, HttpAgent, type ActorSubclass } from "@icp-sdk/core/agent";
 import { SignerAgent } from "@slide-computer/signer-agent";
 import { Signer } from "@slide-computer/signer";
 import { BaseAdapter, AdapterConstructorArgs } from "./BaseAdapter";
