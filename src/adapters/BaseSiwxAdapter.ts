@@ -35,7 +35,7 @@ export abstract class BaseSiwxAdapter<TConfig = any> extends BaseDelegationAdapt
     userCanisterPublicKeyDer: ArrayBuffer,
   ): DelegationIdentity {
     const delegation = new Delegation(
-      (signedDelegation.delegation.pubkey as Uint8Array).slice().buffer,
+      (signedDelegation.delegation.pubkey as Uint8Array).slice(),
       signedDelegation.delegation.expiration,
       signedDelegation.delegation.targets?.length > 0
         ? signedDelegation.delegation.targets[0]
@@ -51,7 +51,7 @@ export abstract class BaseSiwxAdapter<TConfig = any> extends BaseDelegationAdapt
 
     const delegationChain = DelegationChain.fromDelegations(
       delegations,
-      new Uint8Array(userCanisterPublicKeyDer).buffer,
+      new Uint8Array(userCanisterPublicKeyDer) as any,
     );
 
     return DelegationIdentity.fromDelegation(sessionIdentity, delegationChain);

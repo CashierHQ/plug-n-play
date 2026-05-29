@@ -319,6 +319,10 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
+    // Only run the library's own tests; exclude tooling/sub-package suites
+    // (.claude hooks, packages/*) that vitest's defaults would otherwise sweep in.
+    include: ["tests/**/*.{test,spec}.ts"],
+    exclude: ["node_modules/**", "dist/**", "packages/**", ".claude/**"],
   },
   
   define: {
